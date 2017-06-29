@@ -1,0 +1,21 @@
+#! /usr/bin/env python
+
+import sys
+
+def makeBigTime(str):
+	if len(str) < 2:
+		raise Exception("That's not very big time.  Provide at least two chars to make bigtime.")
+ 	bto = ""
+	for i in range(len(str)):
+		if i == len(str) - 1:
+			bto += str[i].upper()
+		else:
+			bto += str[i].upper() + ' '
+	print(bto)
+
+def main(argv):
+	argstring = ' '.join(argv[1:])
+	makeBigTime(argstring)
+
+if __name__ == "__main__":
+    main(sys.argv)
